@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const usersController = require('../controllers/AccountDetailsController');
+const AccountDetailsController = require('../controllers/accountDetailsController');
 
-router.get('/', AccountDetailsController.get_AccountDetails);
+router.get('/', AccountDetailsController.getAccountDetails);
 
 module.exports = router;
