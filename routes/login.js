@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var axios = require('axios');
 
-router.get('/login', function(req, res, next) {
+router.get('/', function(req, res, next) {
     axios.get('https://jsonplaceholder.typicode.com/login/')
     .then(function(response) {
       console.log(response.data);
