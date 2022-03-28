@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html>
-<form>
-    <!-- Email input -->
-    <div class="form-outline mb-4">
-      <input type="Username" id="form2Example1" class="form-control" />
-      <label class="form-label" for="form2Example1">Username</label>
+  <body>
+
+
+
+<form method = "POST" action = "/login">
+      <div class="form-group col-4">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" placeholder="Username" name = "username">
+      </div>
+
+    <div class="form-group col-4">
+      <label for="password">Password:</label>
+      <input type="text" class="form-control" id="password" placeholder="Password" name = "password">
     </div>
   
-    <!-- Password input -->
-    <div class="form-outline mb-4">
-      <input type="password" id="form2Example2" class="form-control" />
-      <label class="form-label" for="form2Example2">Password</label>
-    </div>
-  
-    <!-- 2 column grid layout for inline styling -->
-    <div class="row mb-4">
-      <div class="col d-flex justify-content-center">
-
-     </div>
 
   
-    <!-- Submit button -->
-    <button type="button" class="btn btn-primary btn-block mb-4">Log in</button>
+    <input type = "submit" value = "Log" class="btn btn-primary"/>
+
+  
+ 
+   </form>
+
+
+   
     </html>
+    <body>
