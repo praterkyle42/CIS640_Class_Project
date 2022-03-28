@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+  <% include ../partials/header %> 
+
   <body>
-    <h1><%= Patients %></h1>
-    <% include ./partials/navbar %> 
-    <p>Welcome to <%= title %></p>
+    <% include ../partials/navbar %> 
+
+    <h1>Patients</h1>
+
+    <% include ../partials/scripts %> 
+
   </body>
 </html>
