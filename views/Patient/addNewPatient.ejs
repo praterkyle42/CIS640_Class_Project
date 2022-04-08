@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<% include ../partials/header %> 
+
+<body>
+    <% include ../partials/navbar %> 
+    <div class="container">
+        <h1>Add new patient</h1>
+        
+        <form method="POST" action="/patient/create">
+            <div class="form-group row mt-3">
+                <div class="w-25">
+                    <label for="creatorID">CreatorID: </label> 
+                    <input class="form-control" name="creatorID" type="text">
+                </div>   
+            </div>
+            <div class="form-group row mt-3">
+                <div class="w-25">
+                    <label for="firstName">First Name: </label>
+                    <input class="form-control" name="firstName" type="text">
+                </div>
+                <div class="w-25 ml-3">
+                    <label for="lastName">Last Name: </label>
+                    <input class="form-control" name="firstName" type="text">
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <div class="w-25">
+                    <label for="birthDate">Birthday: </label>
+                    <input class="form-control" name="birthDate" type="date">
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <div class="w-25"> 
+                    <label for="zipCode">Zip Code: </label>
+                    <input class="form-control" name="zipCode" type="text">
+                </div>
+                <div class="w-25 ml-3">
+                    <label for="state">State: </label>
+                    <select name="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>Arizona</option>
+                        <option>Arkansas</option>
+                        <option>California</option>
+                        <option>Colorado</option>
+                        <option>Connecticut</option>
+                        <option>Deleware</option>
+                        <option>District of Columbia</option>
+                        <option>Florida</option>
+                        <option>Georgia</option>
+                        <option>Hawaii</option>
+                        <option>Idaho</option>
+                        <option>Illinois</option>
+                        <option>Indiana</option>
+                        <option>Iowa</option>
+                        <option>Kansas</option>
+                        <option>Kentucky</option>
+                        <option>Louisiana</option>
+                        <option>Maine</option>
+                        <option>Maryland</option>
+                        <option>Massachusetts</option>
+                        <option>Michigan</option>
+                        <option>Minnesota</option>
+                        <option>Mississippi</option>
+                        <option>Missouri</option>
+                        <option>Montana</option>
+                        <option>Nebraska</option>
+                        <option>Nevada</option>
+                        <option>New Hampshire</option>
+                        <option>New Jersey</option>
+                        <option>New Mexico</option>
+                        <option>New York</option>
+                        <option>North Carolina</option>
+                        <option>North Dakota</option>
+                        <option>Ohio</option>
+                        <option>Oklahoma</option>
+                        <option>Oregon</option>
+                        <option>Pennsylvania</option>
+                        <option>Rhode Island</option>
+                        <option>South Carolina</option>
+                        <option>South Dakota</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Utah</option>
+                        <option>Vermont</option>
+                        <option>Virginia</option>
+                        <option>Washington</option>
+                        <option>West Virginia</option>
+                        <option>Wisconsin</option>
+                        <option>Wyoming</option>
+                    </select>    
+                </div>
+            </div>
+            <div class="form-group row mt-3"> 
+                <div class="w-25">
+                   <label for="phone">Phone Number: </label>
+                   <input class="form-control" type="text" name="phone" placeholder="333-333-3333">
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <div class="w-25">
+                    <label for="createDate">Create Date: </label>
+                    <input class="form-control" name="createDate" type="date">
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <div class="w-25">
+                    <label for="insurance">Insurance Type: </label>
+                    <select class="form-control" name="insurance">
+                        <option selected>Choose...</option>
+                        <option>Medicare</option>
+                        <option>Medicaid</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="w-25 ml-3">
+                    <label for="testType">Test Type: </label>
+                    <select class="form-control" name="testType">
+                        <option selected>Choose...</option>
+                        <option>Test 1</option>
+                        <option>Test 2</option>
+                        <option>Test 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <div class="w-25">
+                    <label for="serivce">Doctor Service: </label>
+                    <input class="form-control" name="service" type="text">
+                </div>
+                <div class="w-25 ml-3">
+                    <label for="lab">Lab Name: </label>
+                    <input class="form-control" name="lab" type="text">
+                </div>
+                <div class="w-25 ml-3">
+                    <label for="status">Sample Status: </label>
+                    <select class="form-control" name="status">
+                        <option selected>Choose...</option>
+                        <option>Ready to Ship</option>
+                        <option>Teledoc Signed</option>
+                        <option>To Teledoc</option>
+                        <option>Hold</option>
+                        <option>Received</option>
+                        <option>QC Reject</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row mt-3" style="width: 25%; display: flex; justify-content: space-between">
+                <input  type="submit" class="btn btn-primary" value="Submit" style="width:80px;"> 
+                <a class="btn btn-primary" href="/patient" style="width: 80px;">Back</a>
+            </div>
+        </form>
+    </div>
+</body>
