@@ -8,6 +8,64 @@
     <h1>Account Details</h1>
     <a class="btn btn-primary" href="/AccountDetails/create">+User</a>
 
+
+    <thead>
+      <tr>
+        <td>FirstName</td>
+        <td>LastName</td>
+        <td>Email</td>
+        <td>Password</td>
+        <td>Role</td>
+      </tr>
+    </thead>
+  <% for (let i=0; i < user.length; i++) { %>
+    <tr>
+      <td>
+        <%= user[i].FirstName %>
+      </td>
+      <td>  
+        <%= user[i].LastName %>
+      </td>
+      <td> 
+        <%= user[i].Email %>
+      </td>
+      <td>
+        <%= patients[i].Password %>
+      </td>
+      <td>
+        <%= patients[i].Role%>
+      </td>
+      <td><a href="/user/index?id=<%=user[i]._id%>">Update</a>
+        | <a href="/user/delete?id=<%=user[i]._id%>" onclick="return confirm('Are you sure, you want to delete your account?')">
+          Delete</a></td>
+    </tr>
+    <% } %>
+
+  </body>
+  </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <% include ../partials/scripts %> 
 
   </body>
