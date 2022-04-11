@@ -16,9 +16,11 @@
             <td>Creator Name</td>
             <td>Patient First Name</td>
             <td>Patient Last Name</td>
+            <td>Birthdate</td>
             <td>Zipcode</td>
             <td>State</td>
             <td>Phone Number</td>
+            <td>Create Date</td>
             <td>Insurance Type</td>
             <td>Test Type</td>
             <td>Doctor Service</td>
@@ -42,6 +44,9 @@
               <%= patients[i].LastName%>
             </td>
             <td>
+              <%= patients[i].Birthdate%>
+            </td>
+            <td>
               <%= patients[i].Zipcode%>
             </td>
             <td>
@@ -49,6 +54,9 @@
             </td>
             <td>  
               <%= patients[i].PhoneNumber%>
+            </td>
+            <td>
+              <%= patients[i].CreateDate%>
             </td>
             <td>
               <%= patients[i].InsuranceType %>
