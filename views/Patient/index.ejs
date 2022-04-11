@@ -44,7 +44,7 @@
               <%= patients[i].LastName%>
             </td>
             <td>
-              <%= patients[i].Birthdate%>
+              <%= patients[i].Birthdate?.toLocaleDateString()%>
             </td>
             <td>
               <%= patients[i].Zipcode%>
@@ -56,7 +56,7 @@
               <%= patients[i].PhoneNumber%>
             </td>
             <td>
-              <%= patients[i].CreateDate%>
+              <%= patients[i].CreateDate?.toLocaleDateString()%>
             </td>
             <td>
               <%= patients[i].InsuranceType %>
