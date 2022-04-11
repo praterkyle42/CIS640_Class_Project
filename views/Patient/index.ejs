@@ -6,11 +6,82 @@
     <% include ../partials/navbar %> 
     <div class="container">
       <h1>Patients</h1>
+    </div>
+    <div style="width: 90%; margin-left: 4%">
+      <a class="btn btn-primary" href="Patient/addNewPatient" style="margin-bottom: 10px">+Create</a>
+      <table class="table table-bordered table-striped" id="patientTable">
+        <thead>
+          <tr>
+            <td>Creator ID</td>
+            <td>Creator Name</td>
+            <td>Patient First Name</td>
+            <td>Patient Last Name</td>
+            <td>Zipcode</td>
+            <td>State</td>
+            <td>Phone Number</td>
+            <td>Insurance Type</td>
+            <td>Test Type</td>
+            <td>Doctor Service</td>
+            <td>Lab Name</td>
+            <td>Sample Status</td>
+            <td>Actions</td>
+          </tr>
+        </thead>
+        <% for (let i=0; i < patients.length; i++) { %>
+          <tr>
+            <td>
+              <%= patients[i].CreatorId %>
+            </td>
+            <td>  
+              <%= patients[i].CreatorName %>
+            </td>
+            <td> 
+              <%= patients[i].FirstName %>
+            </td>
+            <td>
+              <%= patients[i].LastName%>
+            </td>
+            <td>
+              <%= patients[i].Zipcode%>
+            </td>
+            <td>
+              <%= patients[i].State%>
+            </td>
+            <td>  
+              <%= patients[i].PhoneNumber%>
+            </td>
+            <td>
+              <%= patients[i].InsuranceType %>
+            </td>
+            <td>
+              <%= patients[i].TestType %>
+            </td>  
+            <td>
+              <%= patients[i].DoctorService %>
+            </td>
+            <td>
+              <%= patients[i].LabName %>
+            </td>
+            <td>
+              <%= patients[i].SampleStatus %>
+            </td>
+            <td><a href="/patient/update?id=<%=patients[i]._id%>">Update</a>
+              | <a href="/patient/delete?id=<%=patients[i]._id%>" onclick="return confirm('Are you sure, you want to delete it?')">
+                Delete</a></td>
+          </tr>
+          <% } %>
 
-      <a class="btn btn-primary" href="Patient/addNewPatient">+Add Patient</a>
+      </table>
     </div> 
 
     <% include ../partials/scripts %> 
+    <script type="text/javascript">
+      $(document).ready(function () {
+            $('#patientTable').DataTable({
+              responsive: true
+            });
+          });
+    </script>
 
   </body>
 </html>
