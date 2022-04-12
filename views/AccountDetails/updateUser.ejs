@@ -6,164 +6,43 @@
     <div class="container">
         <h1>Update Patient</h1>
 
-        <form method="POST" action="/patient/update">
+        <form method="POST" action="/AccountDetails/update">
             <input type="hidden" name="id" value="<%=data._id%>" />
             <div class="form-group row mt-3">
                 <div class="w-25">
-                    <label for="creatorID">CreatorID: </label> 
-                    <input class="form-control" name="creatorID" type="text" value="<%=data.CreatorId%>"/>
+                    <label for="FirstName%">First Name: </label> 
+                    <input class="form-control" name="FirstName" type="text" value="<%=data.FirstName%>"/>
                 </div>
                 <div class="w-25 ml-3">
-                    <label for="creatorName">Creator Name: </label>
-                    <input class="form-control" name="creatorName" type="text" value="<%=data.CreatorName%>">
+                    <label for="LastName">Last Name: </label>
+                    <input class="form-control" name="LastName" type="text" value="<%=data.LastName%>">
                 </div>   
             </div>
             <div class="form-group row mt-3">
                 <div class="w-25">
-                    <label for="firstName">Patient First Name: </label>
-                    <input class="form-control" name="firstName" type="text" value="<%=data.FirstName%>">
+                    <label for="Email">Email: </label>
+                    <input class="form-control" name="Email" type="text" value="<%=data.Email%>">
                 </div>
                 <div class="w-25 ml-3">
-                    <label for="lastName">Patient Last Name: </label>
-                    <input class="form-control" name="lastName" type="text" value="<%=data.LastName%>">
+                    <label for="Password">Password: </label>
+                    <input class="form-control" name="Password" type="text" value="<%=data.Password%>">
                 </div>
             </div>
-            <!-- <div class="form-group row mt-3">
-                <div class="w-25">
-                    <label for="birthDate">Birthday: </label>
-                    <input class="form-control" name="birthDate" type="date">
-                </div>
-            </div> -->
+ 
             <div class="form-group row mt-3">
                 <div class="w-25"> 
-                    <label for="zipCode">Zip Code: </label>
-                    <input class="form-control" name="zipCode" type="text" value="<%=data.Zipcode%>">
+                    <label for="Role">Role: </label>
+                    <input class="form-control" name="Role" type="text" value="<%=data.Role%>">
                 </div>
-                <div class="w-25 ml-3">
-                    <label for="inputState">State: </label>
-                    <select name="inputState" class="form-control" id="state" value="<%=data.State%>">
-                        <option value="Choose...">Choose...</option>
-                        <option value="Alabama">Alabama</option>
-                        <option value="Alaska" >Alaska</option>
-                        <option value="Arizona">Arizona</option>
-                        <option value="Arkansas">Arkansas</option>
-                        <option value="California">California</option>
-                        <option value="Colorado">Colorado</option>
-                        <option value="Connecticut">Connecticut</option>
-                        <option value="Deleware">Deleware</option>
-                        <option value="District of Columbia">District of Columbia</option>
-                        <option value="Florida">Florida</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Hawaii">Hawaii</option>
-                        <option value="Idaho">Idaho</option>
-                        <option value="Illinois">Illinois</option>
-                        <option value="Indiana">Indiana</option>
-                        <option value="Iowa">Iowa</option>
-                        <option value="Kansas">Kansas</option>
-                        <option value="Kentucky">Kentucky</option>
-                        <option value="Louisiana">Louisiana</option>
-                        <option value="Maine">Maine</option>
-                        <option value="Maryland">Maryland</option>
-                        <option value="Massachusetts">Massachusetts</option>
-                        <option value="Michigan">Michigan</option>
-                        <option value="Minnesota">Minnesota</option>
-                        <option value="Mississippi">Mississippi</option>
-                        <option value="Missouri">Missouri</option>
-                        <option value="Montana">Montana</option>
-                        <option value="Nebraska">Nebraska</option>
-                        <option value="Nevada">Nevada</option>
-                        <option value="New Hampshire">New Hampshire</option>
-                        <option value="New Jersey">New Jersey</option>
-                        <option value="New Mexico">New Mexico</option>
-                        <option value="New York">New York</option>
-                        <option value="North Carolina">North Carolina</option>
-                        <option value="North Dakota">North Dakota</option>
-                        <option value="Ohio">Ohio</option>
-                        <option value="Oklahoma">Oklahoma</option>
-                        <option value="Oregon">Oregon</option>
-                        <option value="Pennsylvania">Pennsylvania</option>
-                        <option value="Rhode Island">Rhode Island</option>
-                        <option value="South Carolina">South Carolina</option>
-                        <option value="South Dakota">South Dakota</option>
-                        <option value="Tennessee">Tennessee</option>
-                        <option value="Texas">Texas</option>
-                        <option value="Utah">Utah</option>
-                        <option value="Vermont">Vermont</option>
-                        <option value="Virginia">Virginia</option>
-                        <option value="Washington">Washington</option>
-                        <option value="West Virginia">West Virginia</option>
-                        <option value="Wisconsin">Wisconsin</option>
-                        <option value="Wyoming">Wyoming</option>
-                    </select>    
-                </div>
-            </div>
-            <div class="form-group row mt-3"> 
-                <div class="w-25">
-                   <label for="phone">Phone Number: </label>
-                   <input class="form-control" type="text" name="phone" placeholder="333-333-3333" value="<%=data.PhoneNumber%>">
-                </div>
-            </div>
-            <!-- <div class="form-group row mt-3">
-                <div class="w-25">
-                    <label for="createDate">Create Date: </label>
-                    <input class="form-control" name="createDate" type="date">
-                </div>
-            </div> -->
-            <div class="form-group row mt-3">
-                <div class="w-25">
-                    <label for="insurance">Insurance Type: </label>
-                    <select class="form-control" name="insurance" id="insuranceType" value="<%=data.InsuranceType%>">
-                        <option value="Choose...">Choose...</option>
-                        <option value="Medicare">Medicare</option>
-                        <option value="Medicaid">Medicaid</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                <div class="w-25 ml-3">
-                    <label for="testType">Test Type: </label>
-                    <select class="form-control" name="testType" id="testType" value="<%=data.TestType%>">
-                        <option value="Choose...">Choose...</option>
-                        <option value="Test 1">Test 1</option>
-                        <option value="Test 2">Test 2</option>
-                        <option value="Test 3">Test 3</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group row mt-3">
-                <div class="w-25">
-                    <label for="serivce">Doctor Service: </label>
-                    <input class="form-control" name="service" type="text" value="<%=data.DoctorService%>" >
-                </div>
-                <div class="w-25 ml-3">
-                    <label for="lab">Lab Name: </label>
-                    <input class="form-control" name="lab" type="text" value="<%=data.LabName%>">
-                </div>
-                <div class="w-25 ml-3">
-                    <label for="status">Sample Status: </label>
-                    <select class="form-control" name="status" id="sampleStatus" value="<%=data.SampleStatus%>">
-                        <option value="Choose...">Choose...</option>
-                        <option value="Ready to Ship">Ready to Ship</option>
-                        <option value="To Teledoc">To Teledoc</option>
-                        <option value="Hold">Hold</option>
-                        <option value="Received">Received</option>
-                        <option value="QC Reject">QC Reject</option>
-                    </select>
+               
                 </div>
             </div>
             <div class="form-group row mt-3" style="width: 25%; display: flex; justify-content: space-between">
                 <input  type="submit" class="btn btn-primary" value="Submit" style="width:80px;"> 
-                <a class="btn btn-primary" href="/patient" style="width: 80px;">Back</a>
+                <a class="btn btn-primary" href="/AccounntDetails" style="width: 80px;">Back</a>
             </div>
         </form>
     </div>
     <% include ../partials/scripts %> 
-    <script>
-        $(document).ready(function() {
-            $("#state option[value=<%=data.State%>]").prop('selected', true);
-            $("#testType option[value='<%=data.TestType%>']").prop('selected', true);
-            $("#sampleStatus option[value='<%=data.SampleStatus%>']").prop('selected', true);
-            $("#insuranceType option[value='<%=data.InsuranceType%>']").prop('selected', true);
-        })
 
-    </script>
 </body>
