@@ -4,7 +4,11 @@ const AccountDetailsController = require('../controllers/accountDetailsControlle
 
 router.get('/', AccountDetailsController.getAccountDetails);
 
-router.get('/create', AccountDetailsController.get_AddUser);
-router.post('/create', AccountDetailsController.getAccountDetails);
+router.get('/create', AccountDetailsController.get_addNewUser);
+router.post('/create', AccountDetailsController.post_newUser);
 
+router.get('/update', AccountDetailsController.get_updateUser);
+router.post('/update', AccountDetailsController.post_updateUser);
+
+router.get('/delete', AccountDetailsController.get_deleteUser);
 module.exports = router;
