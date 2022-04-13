@@ -44,7 +44,7 @@
               <%= patients[i].LastName%>
             </td>
             <td>
-              <%= patients[i].Birthdate?.toLocaleDateString()%>
+              <%= patients[i].Birthdate?.toLocaleDateString('en-US', {timeZone: 'UTC'})%>
             </td>
             <td>
               <%= patients[i].Zipcode%>
@@ -56,7 +56,7 @@
               <%= patients[i].PhoneNumber%>
             </td>
             <td>
-              <%= patients[i].CreateDate?.toLocaleDateString()%>
+              <%= patients[i].CreateDate?.toLocaleDateString('en-US', {timeZone: 'UTC'})%>
             </td>
             <td>
               <%= patients[i].InsuranceType %>

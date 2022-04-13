@@ -3,6 +3,7 @@
 
 <body>
     <% include ../partials/navbar %> 
+    <% include ../partials/scripts %>
     <div class="container">
         <h1>Update Patient</h1>
 
@@ -28,12 +29,12 @@
                     <input class="form-control" name="lastName" type="text" value="<%=data.LastName%>">
                 </div>
             </div>
-            <!-- <div class="form-group row mt-3">
+            <div class="form-group row mt-3">
                 <div class="w-25">
                     <label for="birthDate">Birthday: </label>
-                    <input class="form-control" name="birthDate" type="date">
+                    <input class="form-control" name="birthDate" id="birthdate" type="date">
                 </div>
-            </div> -->
+            </div>
             <div class="form-group row mt-3">
                 <div class="w-25"> 
                     <label for="zipCode">Zip Code: </label>
@@ -103,12 +104,12 @@
                    <input class="form-control" type="text" name="phone" placeholder="333-333-3333" value="<%=data.PhoneNumber%>">
                 </div>
             </div>
-            <!-- <div class="form-group row mt-3">
+            <div class="form-group row mt-3">
                 <div class="w-25">
                     <label for="createDate">Create Date: </label>
-                    <input class="form-control" name="createDate" type="date">
+                    <input class="form-control" name="createDate" type="date" id="createdate">
                 </div>
-            </div> -->
+            </div>
             <div class="form-group row mt-3">
                 <div class="w-25">
                     <label for="insurance">Insurance Type: </label>
@@ -162,8 +163,18 @@
             $("#state option[value=<%=data.State%>]").prop('selected', true);
             $("#testType option[value='<%=data.TestType%>']").prop('selected', true);
             $("#sampleStatus option[value='<%=data.SampleStatus%>']").prop('selected', true);
-            $("#insuranceType option[value='<%=data.InsuranceType%>']").prop('selected', true);
-        })
-
+            $("#insuranceType option[value='<%=data.InsuranceType%>']").prop('selected', true);   
+        } );
+    </script>
+    <script>
+        //Set the default value for the birthdate field
+        let birthday = '<%=data.Birthdate?.toISOString().split('T')[0]%>';
+        let birthdate = document.querySelector('#birthdate'); 
+        birthdate.value = birthday;
+       
+        //Set the default value for the CreateDate field
+        let createDate = '<%=data.CreateDate?.toISOString().split('T')[0]%>';
+        let createDateField = document.querySelector('#createdate'); 
+        createDateField.value = createDate;
     </script>
 </body>
