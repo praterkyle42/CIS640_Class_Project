@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <% include ../partials/header %> 
+
+  <body>
+     
+    <% include ../partials/navbar %> 
+    <div class="container">
+    <h1>Create a User</h1>
+
+    <Form method="POST" action="/AccountDetails/create">
+        <div class="form-group row mt-3">
+            <div class="w-25">
+                <label for="firstName">First Name: </label>
+                <input class="form-control" type="text" name="firstName"/>
+            </div>
+            <div class="w-25 ml-3">
+                <label for="lastName">Last Name: </label>
+                <input class="form-control" type="text" name="lastName"/>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <div class="w-25">
+                <label for="email">Email: </label>
+                <input class="form-control" type="text" name="email"/>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <div class="w-25">
+                <label for="password">Password: </label>
+                <input class="form-control" type="password" name="password"/>
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <div class="w-25">
+                <label for="role">User Role: </label>
+                <select name="role" id="userRole" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>Admin</option>
+                    <option>Doctor</option>
+                    <option>Employee</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row mt-4" style="width: 25%; display: flex; justify-content: space-between">
+            <input type="submit" class="btn btn-primary" value="Submit" style="width:80px;">
+            <a class="btn btn-primary" href="/AccountDetails" style="width: 80px;">Back</a>
+        </div>
+    </Form>
+
+  </div>
+    <% include ../partials/scripts %> 
+
+  </body>
+</html>
