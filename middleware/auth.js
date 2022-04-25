@@ -17,7 +17,7 @@ function ensureisAdmin(req,res,next) {
         res.send('You are not authorized to access this page');
     }   else {
         res.redirect('/account/login');
-    } 
+    }
 
 }
 
