@@ -7,7 +7,7 @@ exports.getAccountDetails = function(req,res) {
             console.log(err);
         } else {
             console.log(data);
-            res.render('AccountDetails/index', {users: data} );
+            req.render('AccountDetails/index', {users: data} );
         }
 
     })
@@ -47,12 +47,12 @@ exports.post_newUser = function(req,res) {
 }
 
 exports.get_updateUser = function(req,res) {
-    User.findOne({ _id: req.query.id }, function (err, User) {
+    user.findOne({ _id: req.query.id }, function (err, user) {
         if (err) {
             console.log(err);
         } else {
-            console.log(User);
-            res.render('AccountDetails/updateUser', { data: User });
+            console.log(user);
+            res.render('AccountDetails/updateUser', { data: user });
         }
     });
 
