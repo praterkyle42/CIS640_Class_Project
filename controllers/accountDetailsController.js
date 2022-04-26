@@ -23,11 +23,11 @@ exports.post_newUser = function(req,res) {
     }
     
     let newUser = new User({
-        FirstName: req.body.firstName,
-        LastName: req.body.lastName, 
-        Email: req.body.email, 
-        Password: req.body.password, 
-        Role: req.body.role
+        firstName: req.body.firstName,
+        lastName: req.body.lastName, 
+        email: req.body.email, 
+        password: req.body.password, 
+        role: req.body.role
     })
 
     newUser.save(function(err) {
