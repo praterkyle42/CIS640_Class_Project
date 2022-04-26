@@ -6,7 +6,7 @@ exports.getAccountDetails = function(req,res) {
             console.log(err);
         } else {
             console.log(data);
-            req.render('AccountDetails/index', {users: data} );
+            res.render('AccountDetails/index', {users: data} );
         }
 
     })
@@ -22,13 +22,14 @@ exports.post_newUser = function(req,res) {
         enabled = true;
     }
     
-    let newUser = new User({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName, 
-        email: req.body.email, 
-        password: req.body.password, 
-        role: req.body.role
-    })
+    var newUser = new User();
+    
+    newUser.firstName = req.body.firstName,
+    newUser.lastName = req.body.lastName, 
+    newUser.email = req.body.email, 
+    newUser.password = newUser.generateHash(req.body.password), 
+    newUser.role = req.body.role
+    
 
     newUser.save(function(err) {
         if(err) {
@@ -60,9 +61,12 @@ exports.post_updateUser = function (req, res) {
         firstName: req.body.firstName,
         lastName: req.body.lastName, 
         email: req.body.email, 
-        password: req.body.password, 
         role: req.body.role
     };
+    if(req.body.password) {
+        let tempUser = new User()
+        updateData.password = tempUser.generateHash(req.body.password)
+    }
 
     User.findOneAndUpdate({ _id: req.body.id }, updateData, function (err, data) {
         if (err) {
