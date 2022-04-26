@@ -40,7 +40,7 @@ app.use(passport.session());
 app.use(flash()); 
  
 app.use(function (req, res, next) {
-  req.locals.user = req.user;
+  res.locals.user = req.user;
   next();
 });
  
