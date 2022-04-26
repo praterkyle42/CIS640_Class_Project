@@ -6,7 +6,7 @@ exports.getAccountDetails = function(req,res) {
             console.log(err);
         } else {
             console.log(data);
-            res.render('AccountDetails/index', {users: data} );
+            req.render('AccountDetails/index', {users: data} );
         }
 
     })
