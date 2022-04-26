@@ -8,7 +8,7 @@ function ensureAuthenticated(req, res, next) {
 }
 function ensureisAdmin(req,res,next) {
     //if user is authenticated in the session, carry on
-    if (req.isAuthenticated() && res.locals.User.role === 'Admin')
+    if (req.isAuthenticated() && req.locals.User.role === 'Admin')
         return next();
 
     // if they are not, redirect them to the homa pgae
