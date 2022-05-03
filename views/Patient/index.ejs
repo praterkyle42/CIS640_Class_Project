@@ -73,10 +73,23 @@
             <td>
               <%= patients[i].SampleStatus %>
             </td>
-            <td><a href="/patient/update?id=<%=patients[i]._id%>">Update</a>
-              | <a href="/patient/delete?id=<%=patients[i]._id%>" onclick="return confirm('Are you sure, you want to delete it?')">
-                Delete</a></td>
-                <i class="bi bi-info-circle"></i>
+            <td>
+              <a data-toggle="tooltip" data-placement="right" title="View Patient Details" href="/patient/patientDetails?id=<%=patients[i]._id%>">
+              <span class="material-symbols-outlined">
+                info
+                </span>
+              </a>
+                |
+              <a data-toggle="tooltip" data-placement="right" title="Update Patient" href="/patient/update?id=<%=patients[i]._id%>"><span class="material-symbols-outlined">
+              update
+              </span></a>
+               <a data-toggle="tooltip" data-placement="bottom" title="Delete Patient" href="/patient/delete?id=<%=patients[i]._id%>" onclick="return confirm('Are you sure, you want to delete it?')">
+                <span class="material-symbols-outlined">
+                  delete
+                  </span></a>
+                
+              </td>
+                
           </tr>
           <% } %>
 
@@ -91,6 +104,9 @@
               responsive: true
             });
           });
+          $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+      });
     </script>
 
   </body>

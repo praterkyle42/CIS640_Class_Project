@@ -102,3 +102,14 @@ exports.post_updatePatient = function (req, res) {
             }
         })
     }
+
+    exports.get_patientDetails = function(req, res) {
+        Patient.findOne({ _id: req.query.id }, function (err, patient) {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(patient);
+                res.render('Patient/patientDetails', { data: patient });
+            }
+        });
+    }
