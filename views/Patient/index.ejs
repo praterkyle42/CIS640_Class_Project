@@ -74,13 +74,13 @@
               <%= patients[i].SampleStatus %>
             </td>
             <td>
-              <a data-toggle="tooltip" data-placement="right" title="View Patient Details" href="/patient/patientDetails?id=<%=patients[i]._id%>">
+              <a data-toggle="tooltip" data-placement="top" title="View Patient Details" href="/patient/patientDetails?id=<%=patients[i]._id%>">
               <span class="material-symbols-outlined">
                 info
                 </span>
               </a>
                 |
-              <a data-toggle="tooltip" data-placement="right" title="Update Patient" href="/patient/update?id=<%=patients[i]._id%>"><span class="material-symbols-outlined">
+              <a data-toggle="tooltip" data-placement="top" title="Update Patient" href="/patient/update?id=<%=patients[i]._id%>"><span class="material-symbols-outlined">
               update
               </span></a>
                <a data-toggle="tooltip" data-placement="bottom" title="Delete Patient" href="/patient/delete?id=<%=patients[i]._id%>" onclick="return confirm('Are you sure, you want to delete it?')">
