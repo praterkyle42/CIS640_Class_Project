@@ -1,20 +1,29 @@
+<% include ./header %>
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg mb-5">
-  <div class="container">
-      <a class="navbar-brand" href="/">
-        ILMP
+  <div style="margin-left: 4%">
+      <a class="navbar-brand ms-auto" href="/">
+        <img src="../images/alt_logo.jpg" style="height: 72px">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+  </div>    
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <div class="navbar-nav">
-          
-              <a class="nav-link" href="/dashboard">Dashboard</a>
-              <a class="nav-link" href="/patient">Patients</a>
-              <a class="nav-link" href="/AccountDetails">Accounts</a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/patient">Patients</a>
+          </li>
+        </ul>
+        <div class="navbar-nav" style="margin-right: 4%">
+              <a class="nav-link" href="/AccountDetails"><span class="material-symbols-outlined">
+                account_circle
+                </span></a>
               <a class="nav-link" href="/account/logout">Logout</a>
+        </div>      
         </div>
       </div>
-    </div>
   </nav>

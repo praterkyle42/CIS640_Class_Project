@@ -14,4 +14,6 @@ router.post('/update',authMiddleware.ensureAuthenticated, patientController.post
 
 router.get('/delete',authMiddleware.ensureAuthenticated, patientController.get_deletePatient);
 
+router.get('/patientDetails', authMiddleware.ensureAuthenticated, patientController.get_patientDetails);
+
 module.exports = router;
