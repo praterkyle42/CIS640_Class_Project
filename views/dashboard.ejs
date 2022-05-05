@@ -4,9 +4,21 @@
     <body>
         <% include ./partials/navbar %> 
         <div class="container"> 
-        <h1>Dashboard</h1>
+            <img src="/images/logo.jpg"
+        style="float: left; margin-left: 1px; padding: 15px;"
+        width="250"
+        height="250">
+            <h1>Hi <%=locals.user.firstName %> <%=locals.user.lastName %>,</h1>
+        <h1>Welcome back to the Interactive Lab Manament Platform.</h1>
+        <br>
         <% include ./partials/scripts %> 
-        <h1>Hi <%=locals.user.firstName %> <%=locals.user.lastName %>!</h1>
+        <h2> A vast database to track all your data and patient samples made easy for you!</h2>
+        <br>
+        <h2>Get started today by creating or updating your patient information.</h2>
+        </div>
+        <div class="d-flex justify-content-center" style="margin-top: 40px">
+            <a class="btn btn-primary" href="/Patient/addNewPatient" style="margin-bottom: 10px; margin-right: 40px">Create Patient</a>
+        <a class="btn btn-primary" href="/patient" style="background-color: green; margin-bottom: 10px">View Patients</a>
         </div>
     </body>
 </html>
