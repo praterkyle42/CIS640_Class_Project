@@ -12,4 +12,6 @@ router.get('/update',authMiddleware.ensureIsAdmin, AccountDetailsController.get_
 router.post('/update',authMiddleware.ensureIsAdmin, AccountDetailsController.post_updateUser);
 
 router.get('/delete',authMiddleware.ensureIsAdmin, AccountDetailsController.get_deleteUser);
+
+router.get('/admin',authMiddleware.ensureIsAdmin, AccountDetailsController.get_Admin);
 module.exports = router;

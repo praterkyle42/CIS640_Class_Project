@@ -88,3 +88,6 @@ exports.get_deleteUser = function (req, res) {
         }
     })
 }
+exports.get_Admin = function (req, res) {
+    res.render('AccountDetails/admin');
+}
