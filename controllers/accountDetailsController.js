@@ -89,5 +89,13 @@ exports.get_deleteUser = function (req, res) {
     })
 }
 exports.get_Admin = function (req, res) {
-    res.render('AccountDetails/admin');
+    User.find({}, function (err, data) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log(data);
+            res.render('AccountDetails/admin', { users: data });
+        }
+
+    })
 }
