@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <% include ../partials/header %> 
+
+  <body>
+    <% include ../partials/navbar %> 
+    <div class="container">
+    <h1>Account Details</h1>
+    <h1><%=locals.user.firstName %></h1>
+    <a class="btn btn-primary" href="/AccountDetails/create" style="margin-bottom: 10px">+Create</a>
+    <table class="table table-bordered table-striped" id="userTable">
+      <thead>
+        <tr>
+          <td>FirstName</td>
+          <td>LastName</td>
+          <td>Email</td>
+          <td>Role</td>
+          <td>Actions</td>
+        </tr>
+      </thead>
+      <% for (let i=0; i < users.length; i++) { %>
+        <tr>
+          <td>
+            <%= users[i].firstName %>
+          </td>
+          <td>
+            <%= users[i].lastName %>
+          </td>
+          <td>
+            <%= users[i].email %>
+          </td>
+          <td>
+            <%= users[i].role%>
+          </td>
+          <td><a href="/AccountDetails/update?id=<%=users[i]._id%>">Update</a>
+            | <a href="/AccountDetails/delete?id=<%=users[i]._id%>"
+              onclick="return confirm('Are you sure you want to delete this account?')">
+              Delete</a></td>
+        </tr>
+        <% } %>
+    </table>
+    </div>
+    <% include ../partials/scripts %> 
+    <script type="text/javascript">
+      $(document).ready(function () {
+            $('#userTable').DataTable({
+              responsive: true
+            });
+          });
+    </script>
+
+  </body>
+  </html>
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <% include ../partials/scripts %> 
+
+  </body>
+</html>
