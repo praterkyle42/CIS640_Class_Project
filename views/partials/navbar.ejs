@@ -22,7 +22,9 @@
               <a class="nav-link" href="/AccountDetails"><span class="material-symbols-outlined">
                 account_circle
                 </span></a>
-              <a class="nav-link" href="/AccountDetails/admin">Admin</a>    
+              <% if (locals.user.role == "Admin") { %>  
+                <a class="nav-link" href="/AccountDetails/admin">Admin</a>
+              <%} %>    
               <a class="nav-link" href="/account/logout">Logout</a>
 
         </div>      
