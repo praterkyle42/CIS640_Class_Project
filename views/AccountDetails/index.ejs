@@ -6,20 +6,13 @@
     <% include ../partials/navbar %> 
     <div class="container">
     <h1>Account Details</h1>
-
+    <p class="card-text">This is your account information.</p>
     <div class="card" style="width: 25rem;">
       <div class="card-body">
-
-        <h4>  <%=locals.user.role %> </h4>
-        <h2>Hello,  <%=locals.user.firstName %> <%=locals.user.lastName %>!</h2>
-      
-        <h3>Email:  <%=locals.user.email %> </h3>
-        <p class="card-text">This is your account information.</p>
-
+        <h2><%=locals.user.firstName %> <%=locals.user.lastName %></h2>
+        <h4>Role: <%=locals.user.role %> </h4>
+        <h4>Email: <%=locals.user.email %> </h4>
       </div>
     </div>
-
-
-
   </body>
 </html>
